@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>价格计算器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>价格计算器</h1>
+        
+        <div class="calculator-container">
+            <!-- 左列计算 -->
+            <div class="calculator-column">
+                <h2>左列计算</h2>
+                <div class="input-group">
+                    <label for="factory_price">含税出厂价:</label>
+                    <input type="text" id="factory_price" class="input-field">
+                </div>
+                
+                <div class="input-group">
+                    <label for="tax">税:</label>
+                    <input type="text" id="tax" class="output-field" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="price_without_tax">不含税价:</label>
+                    <input type="text" id="price_without_tax" class="output-field" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="exchange_rate_cost">汇率成本:</label>
+                    <input type="text" id="exchange_rate_cost" class="input-field">
+                </div>
+                
+                <div class="input-group">
+                    <label for="usd_price">USD价:</label>
+                    <input type="text" id="usd_price" class="output-field" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="container_quantity">装柜数量:</label>
+                    <input type="text" id="container_quantity" class="input-field">
+                </div>
+                
+                <div class="input-group">
+                    <label for="freight_rmb_total">运费RMB(总):</label>
+                    <input type="text" id="freight_rmb_total" class="input-field">
+                </div>
+                
+                <div class="input-group">
+                    <label for="freight_rmb_per_item">运费RMB(个):</label>
+                    <input type="text" id="freight_rmb_per_item" class="output-field" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="freight_usd_per_item">运费USD(个):</label>
+                    <input type="text" id="freight_usd_per_item" class="output-field" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="fob_usd">FOB USD:</label>
+                    <input type="text" id="fob_usd" class="output-field" readonly>
+                </div>
+            </div>
+            
+            <!-- 右列计算 -->
+            <div class="calculator-column">
+                <h2>右列计算</h2>
+                <div class="input-group">
+                    <label for="selling_price_usd">卖价(USD):</label>
+                    <input type="text" id="selling_price_usd" class="input-field">
+                </div>
+                
+                <div class="input-group">
+                    <label for="settlement_exchange_rate">结算汇率:</label>
+                    <input type="text" id="settlement_exchange_rate" class="input-field">
+                </div>
+                
+                <div class="input-group">
+                    <label for="selling_price_rmb">卖价结算(RMB):</label>
+                    <input type="text" id="selling_price_rmb" class="output-field" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="tax_refund_rate">退税率:</label>
+                    <input type="text" id="tax_refund_rate" class="input-field">
+                </div>
+                
+                <div class="input-group">
+                    <label for="tax_refund">退税:</label>
+                    <input type="text" id="tax_refund" class="output-field" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="freight_rmb_per_item_right">运费RMB(个):</label>
+                    <input type="text" id="freight_rmb_per_item_right" class="output-field" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="price_difference">差价(个):</label>
+                    <input type="text" id="price_difference" class="output-field" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="total_price_difference">差价(总):</label>
+                    <input type="text" id="total_price_difference" class="output-field" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="min_price_difference">验算(最低差价):</label>
+                    <input type="text" id="min_price_difference" class="input-field">
+                </div>
+                
+                <div class="input-group">
+                    <label for="reverse_selling_price_usd">倒推卖价(USD):</label>
+                    <input type="text" id="reverse_selling_price_usd" class="output-field" readonly>
+                </div>
+                
+                <div class="input-group">
+                    <label for="required_usd">验算(需求USD):</label>
+                    <input type="text" id="required_usd" class="input-field">
+                </div>
+                
+                <div class="input-group">
+                    <label for="reverse_factory_price">倒推(最低出厂价RMB):</label>
+                    <input type="text" id="reverse_factory_price" class="output-field" readonly>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button id="calculate-btn">计算</button>
+            <button id="reset-btn">重置</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
